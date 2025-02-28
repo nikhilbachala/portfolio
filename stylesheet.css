@@ -1,0 +1,278 @@
+/* Main */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0; 
+    outline: none;
+    border: none;
+    font-family: "Italiana", serif;
+}
+body{
+    background-color: #121926;
+}
+.main{
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-logo{
+    font-size: 2rem;
+    color: #c0262a;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 20px 75px;
+}
+.head-logo span {
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 75px;
+}
+.nav-items{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: 0.16s;
+    letter-spacing: 1px;
+}
+.nav-items :hover{
+    color: #c0262a;
+    text-shadow: 0 0 20px #c0262a;
+}
+nav button{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: 0.16s;
+    letter-spacing: 1px;
+    background-color: #c0262a;
+    height: 40px;
+    width: 200px;
+    border-radius: 50px;
+}
+nav button :hover{
+    background-color: #9c1e22;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px #c0262a;
+}
+.pic img{
+    position: absolute;
+    bottom: 0px;
+    right: -20px;
+    width: 42%;
+    border-radius: 0px;
+    pointer-events: none;
+}
+.con{
+    width: 50%;
+    margin: 75px;
+}
+.con h2{
+    font-size: 1.8rem;
+    color: #c0262a;
+    letter-spacing: 2px;
+}
+.con h1{
+    font-size: 7rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: white;
+    padding: 10px 0;
+}
+.con p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    color: rgb(216, 216, 216);
+    width: 95%;
+    padding-bottom: 30px;
+}
+.con{
+    display: block;
+    align-items: center;
+
+}
+
+.con button{
+    font-size: 1.2rem;
+    color: #c0262a;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border: 1px solid #c0262a;
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: 0.16s;
+}
+.con button:hover{
+    background-color: #c0262a;
+    color: white;
+    letter-spacing: 5px;
+}
+.social{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    padding: 20px;
+    transform: translateX(50%);
+}
+.social i{
+    font-size: 1.2rem;
+    color: #c0262a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #c0262a;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.16s;
+}
+.social i :hover{
+    transform: rotate(360deg);
+    box-shadow: 0 0 20px #c0262a;
+}
+@keyframes bottomIn {
+    from {
+        transform: translateY(250px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }   
+}
+@keyframes bottomInImage {
+    from {
+        transform: translateY(250px); scale:(0.6);
+    }
+    to {
+        transform: translateY(0); scale:(1);
+        opacity: 1;
+    }   
+}
+.con h2{
+    animation: bottomIn 1s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+}
+
+.con h1{
+    animation: bottomIn 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+.con p{
+    animation: bottomIn 1.4s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+}
+.con button{
+    animation: bottomIn 1.6s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+}
+.pic img{
+    animation: bottomInImage 1.6s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+}
+@keyframes zoomIn {
+    from {
+        transform: scale:(0);
+    }
+    to {
+        transform: scale:(1);
+        opacity: 1;
+    }    
+} 
+.nav-items,
+.head-logo,
+nav button {
+    animation: zoomIn 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+
+}
+@keyframes bottomInSocial {
+    from {
+        transform: translateY(250px); translateY(50%); scale:(0.6);
+    }
+    to {
+        transform: translateY(0); translateY(50%); scale:(1);
+        opacity: 1;
+    }   
+}
+.social {
+    animation: zoomIn 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+
+}
+
+/* Art */
+
+body{
+    background-color: #121926;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: #c0262a;
+    font-size: 45px;
+    font-weight: bold;
+}
+.tes{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.landscape {
+    width: 625px;
+    height: 420px;
+}
+
+.portrait {
+    width: 300px;
+    height: 440px;
+}
+.art-pic{
+    display: inline-block;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;
+}
+.frame{
+    text-align: center;
+    margin-top: 25px;
+}
+.index{
+    text-align: center;
+    margin-top: 80px;
+}
+.product-info {
+    margin-top: 10px;
+    width: 300px;
+    position: absolute;
+    
+    right: 620px;
+    
+    
+    color: aliceblue;
+}
