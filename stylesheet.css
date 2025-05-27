@@ -24,6 +24,7 @@ header{
     font-weight: 600;
     letter-spacing: 1px;
     padding: 20px 75px;
+    text-decoration: none;
 }
 .head-logo span {
     color: white;
@@ -42,10 +43,12 @@ nav{
     cursor: pointer;
     transition: 0.16s;
     letter-spacing: 1px;
+    text-decoration: none;
 }
 .nav-items :hover{
     color: #c0262a;
     text-shadow: 0 0 20px #c0262a;
+    text-decoration: none;
 }
 nav button{
     font-size: 1.2rem;
@@ -132,24 +135,64 @@ nav button :hover{
     padding: 20px;
     transform: translateX(50%);
 }
-.social i{
-    font-size: 1.2rem;
-    color: #c0262a;
+.social a {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 20px;
-    width: 20px;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
     border: 1px solid #c0262a;
-    padding: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.16s;
+    text-decoration: none;
+    color: #c0262a;
+    transition: 0.3s;
 }
-.social i :hover{
+.social a:hover {
     transform: rotate(360deg);
-    box-shadow: 0 0 20px #c0262a;
+    box-shadow: 0 0 10px #c0262a;
 }
+.image-viewer {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(20px);
+  background-color: rgba(18, 25, 38, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.image-viewer img {
+  max-width: 95vw;
+  max-height: 95vh;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+  object-fit: contain; /* critical to keep aspect ratio without black bars */
+  user-select: none;
+  cursor: auto;
+}
+
+#close-btn {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+  user-select: none;
+}
+.art-pic img {
+  cursor: pointer; /* or use default if you prefer */
+}
+.image-viewer img {
+  cursor: auto;
+}
+   
+
 @keyframes bottomIn {
     from {
         transform: translateY(250px);
