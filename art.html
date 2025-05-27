@@ -1,10 +1,15 @@
 <html lang="en">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nikhilbachala/art</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+
+
 <body>
     <header>
         <a class="head-logo" href="index.html">Nikhil <span>Bachala</span></a>
@@ -22,7 +27,8 @@
     </div>
 
     <DIV class="frame">
-
+        
+        
     <div class="art-pic">
         <img src="images/IMG_131_ND_G1.jpg" class="portrait" alt="">
     </div>
@@ -68,5 +74,17 @@
 
     
     </DIV>
+    <!-- Image viewer popup -->
+<div id="image-viewer" class="image-viewer">
+  <span id="close-btn">&times;</span>
+  <img id="full-image" src="" alt="Full View">
+</div>
+
+
+
+  <!-- Link JS -->
+  <script src="script.js"></script>
 </body>
+
+
 </html>
