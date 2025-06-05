@@ -313,9 +313,170 @@ body{
     margin-top: 10px;
     width: 300px;
     position: absolute;
-    
     right: 620px;
-    
-    
     color: aliceblue;
 }
+/* Contact */
+    .index {
+      text-align: center;
+      margin-top: 70px;
+      color: white;
+      position: relative;
+      padding-top: 80px; /* space for airplane */
+    }
+
+    .outer-box {
+      display: inline-block;
+      padding: 40px 30px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 15px rgba(192, 38, 42, 0.2);
+      backdrop-filter: blur(6px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      color: #c0262a;
+      font-size: 45px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      font-size: 1.3rem;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      animation: zoomIn 1.2s ease-out forwards;
+      opacity: 0;
+      animation-delay: 1s;
+    }
+
+    .contact-link {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .contact-link:hover {
+      color: #c0262a;
+      text-shadow: 0 0 10px #c0262a;
+    }
+
+    .contact-link img {
+      width: 28px;
+      height: 28px;
+      filter: invert(52%) sepia(91%) saturate(3480%) hue-rotate(340deg)
+        brightness(88%) contrast(102%);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-link:hover img {
+      transform: scale(1.2) rotate(10deg);
+      filter: drop-shadow(0 0 5px #c0262a);
+    }
+
+    .caption {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #ddd;
+      margin-top: 30px;
+    }
+
+    /* Airplane animation styles */
+    .airplane {
+      position: absolute;
+      top: 20px;
+      left: -100px;
+      width: 60px;
+      height: 60px;
+      animation: flyRight 8s linear infinite;
+      z-index: 10;
+      filter: drop-shadow(0 0 5px #c0262a);
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes flyRight {
+      0% {
+        left: -100px;
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        left: 110vw;
+        transform: rotate(10deg);
+        opacity: 0;
+      }
+    }
+    /*Projects*/ 
+    body {
+      margin: 0;
+      background-color:  #1a1f2b;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .index {
+      padding: 100px 20px 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-card {
+      text-align: center;
+      max-width: 650px;
+      width: 90%;
+      background-color: #1a1f2b;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(192, 38, 42, 0.25);
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      margin-top: -100px;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 30px rgba(192, 38, 42, 0.5);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .project-title {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 0 0 8px #c0262a;
+    }
+
+    @media (max-width: 768px) {
+      .project-title {
+        font-size: 1.2rem;
+      }
+    }
+
+
